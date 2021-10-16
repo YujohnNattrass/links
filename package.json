@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@growthbook/growthbook": "^0.13.0",
+    "@growthbook/growthbook-react": "^0.5.0",
+    "@optimizely/react-sdk": "^2.7.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
