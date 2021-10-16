@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+import Instructions from './components/Instructions';
 import LinkForm from './components/LinkForm';
 import LinkList from './components/LinkList';
 
@@ -21,6 +22,7 @@ function App() {
   return (
     <div className="container py-5">
       <h1 className="text-center mb-5">List O' Links</h1>
+      <Instructions />
       <LinkForm refreshLinks={loadLinks} />
       <LinkList links={links} refreshLinks={loadLinks}/>
     </div>
