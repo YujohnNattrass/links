@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="container py-5">
-      <h1 className="text-center mb-5">List O' Links</h1>
+      <h1 className="text-center mb-5">List O' Links from stagehand</h1>
       <LinkForm refreshLinks={loadLinks} />
       <LinkList links={links} refreshLinks={loadLinks}/>
     </div>
