@@ -7,7 +7,7 @@ jobs:
   create_or_update_review_app:
     runs-on: ubuntu-latest
     env:
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}  
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_REGION: ${{ secrets.AWS_REGION || 'us-east-1' }}
       AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
@@ -40,7 +40,10 @@ jobs:
       #     SECRET1=${{ secrets.YOUR_SECRET1 }}\n
       #     SECRET2=${{ secrets.YOUR_SECRET2 }}" > .env
       - name: Build Site
-        run: npm run build
+<<<<<<< HEAD
+=======
+        run: netlify build
+>>>>>>> d4a7c0933ae932381bdc2d7a4fc0576996f401fc
       - name: Inject routes into stagehand files
         run: |
           sed -i 's/STAGEHAND_PLACEHOLDER/${{ env.AWS_CF_DOMAIN }}/' ./.github/stagehand/stagehand.js
